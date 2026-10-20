@@ -112,12 +112,11 @@ public class PlayerController : MonoBehaviour
         // Update 맨 아래에 추가
         if (isGrounded)
         {
-            visual.localScale = new Vector3(facing, 1f, 1f);
+            visual.localScale = new Vector3(facing * 6f, 6f, 6f);
         }
         else
         {
-            visual.localScale = new Vector3(
-            facing * airScale.x, airScale.y, 1f);
+            visual.localScale = new Vector3(facing * airScale.x * 6f, airScale.y * 6f, 6f);
         }
 
     }
